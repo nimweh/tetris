@@ -46,7 +46,7 @@ header{display:flex;align-items:flex-start;justify-content:space-between;gap:12p
 #stage{position:relative;flex:1 1 auto;min-height:0;overflow:hidden}
 #board{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  border-radius:8px;box-shadow:0 0 0 1px rgba(255,255,255,.055),0 14px 40px -12px rgba(0,0,0,.85);
+  border-radius:8px;box-shadow:0 0 0 1px rgba(255,255,255,.09),0 16px 44px -14px rgba(0,0,0,.9);
   display:block;
 }
 #pad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;flex:0 0 auto}
@@ -64,7 +64,7 @@ header{display:flex;align-items:flex-start;justify-content:space-between;gap:12p
   border-color:rgba(120,170,255,.36);color:#cfe1ff;
 }
 #overlay{
-  position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;
+  position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;
   padding:26px;background:rgba(9,11,16,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
   opacity:0;pointer-events:none;transition:opacity .22s ease;
 }
@@ -285,10 +285,10 @@ header{display:flex;align-items:flex-start;justify-content:space-between;gap:12p
     var w = W, h = H, cs = CELL;
     bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     bctx.clearRect(0, 0, w, h);
-    bctx.fillStyle = '#14171f';
+    bctx.fillStyle = '#191d27';
     bctx.fillRect(0, 0, w, h);
 
-    bctx.strokeStyle = 'rgba(255,255,255,.042)';
+    bctx.strokeStyle = 'rgba(255,255,255,.058)';
     bctx.lineWidth = 1;
     bctx.beginPath();
     for (var c = 1; c < COLS; c++) {
